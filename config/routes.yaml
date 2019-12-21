@@ -2,6 +2,13 @@ index:
     path: /
     controller: App\Controller\DefaultController::indexPage
 
+
+auth_login:
+    path: /auth/login
+    controller: App\Controller\DefaultController::loginPage
+
 my_games:
     path: /my_games
     controller: App\Controller\DefaultController::myGamesPage
+
+

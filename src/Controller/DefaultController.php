@@ -26,4 +26,12 @@ class DefaultController extends AbstractController
 
         ));
     }
+
+    public function loginPage(Request $request) {
+
+
+        return $this->render('base_auth.html.twig', array(
+
+        ));
+    }
 }
