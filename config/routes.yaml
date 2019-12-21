@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::indexPage
+
+my_games:
+    path: /my_games
+    controller: App\Controller\DefaultController::myGamesPage
