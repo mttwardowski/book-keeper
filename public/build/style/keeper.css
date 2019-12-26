@@ -3,4 +3,12 @@
 .games-table-body .game-table-details h3 {
   font-size: 1em; }
 
+.game-card {
+  padding-bottom: 1em; }
+  .game-card .element-box .game-card-title h4 {
+    font-size: 1em;
+    font-weight: 600; }
+    .game-card .element-box .game-card-title h4 span {
+      font-weight: 600; }
+
 /*# sourceMappingURL=keeper.css.map */

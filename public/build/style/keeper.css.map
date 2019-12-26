@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AASI,sCAAG;EACD,SAAS,EAAE,cAAc;AAK3B,wCAAG;EACD,SAAS,EAAE,GAAG",
-"sources": ["../../../theme/keeper/game_tables.scss"],
+"mappings": "AASI,sCAAG;EACD,SAAS,EAAE,cAAc;AAK3B,wCAAG;EACD,SAAS,EAAE,GAAG;;ACdpB,UAAW;EAET,cAAc,EAAE,GAAG;EAMb,2CAAG;IACD,SAAS,EAAE,GAAG;IACd,WAAW,EAAE,GAAG;IAEhB,gDAAK;MACH,WAAW,EAAE,GAAG",
+"sources": ["../../scss/keeper/game_tables.scss","../../scss/keeper/game_cards.scss"],
 "names": [],
 "file": "keeper.css"
 }

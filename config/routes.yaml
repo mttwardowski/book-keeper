@@ -11,4 +11,6 @@ my_games:
     path: /my_games
     controller: App\Controller\DefaultController::myGamesPage
 
-
+find_games:
+    path: /find_games
+    controller: App\Controller\DefaultController::findGames

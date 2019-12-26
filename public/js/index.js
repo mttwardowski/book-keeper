@@ -8,6 +8,7 @@ $(function() {
 
     function init() {
 
+        $('#page-link-dashboard').addClass('selected');
 
         let data = {};
             $.ajax({
