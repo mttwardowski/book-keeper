@@ -3,7 +3,7 @@
         -------------------->
 <div class="menu-mobile menu-activated-on-click color-scheme-dark">
     <div class="mm-logo-buttons-w">
-        <a class="mm-logo" href="{{ path('index')}}"><img src="img/logo.png"><span>Book Keeper</span></a>
+        <a class="mm-logo" href="{{ path('index')}}"><img src="{{ asset ('img/placeholders/default.jpeg')}}"><span>Book Keeper</span></a>
         <div class="mm-buttons">
 
             <div class="mobile-menu-trigger">
@@ -15,7 +15,7 @@
     <div class="menu-and-user">
         <div class="logged-user-w">
             <div class="avatar-w">
-                <img alt="" src="img/avatar1.jpg">
+                <img alt="" src="{{ asset ('img/placeholders/default.jpeg')}}">
             </div>
             <div class="logged-user-info-w">
                 <div class="logged-user-name">
@@ -44,6 +44,14 @@
                         <div class="os-icon os-icon-layers"></div>
                     </div>
                     <span>Find Games</span></a>
+            </li>
+
+            <li class="">
+                <a href="{{ path('find_games') }}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layers"></div>
+                    </div>
+                    <span>Admin</span></a>
 
             </li>
 
@@ -87,8 +95,16 @@ END - Mobile Menu
                 <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                 </div>
-                <span>Find Games</span></a>
-
+                <span>Find Games</span>
+            </a>
+        </li>
+        <li id="admin-link-dashboard" class="">
+            <a href="{{ path('admin_index') }}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span>Admin</span>
+            </a>
         </li>
 
 
@@ -110,7 +126,7 @@ END - Mobile Menu
                     <li>
                         <a href="#">
                             <div class="user-avatar-w">
-                                <img alt="" src="img/avatar1.jpg">
+                                <img alt="" src="{{ asset ('img/placeholders/default.jpeg')}}">
                             </div>
                             <div class="message-content">
                                 <h6 class="message-from">
@@ -125,7 +141,7 @@ END - Mobile Menu
                     <li>
                         <a href="#">
                             <div class="user-avatar-w">
-                                <img alt="" src="img/avatar2.jpg">
+                                <img alt="" src="{{ asset ('img/placeholders/default.jpeg')}}">
                             </div>
                             <div class="message-content">
                                 <h6 class="message-from">
@@ -140,7 +156,7 @@ END - Mobile Menu
                     <li>
                         <a href="#">
                             <div class="user-avatar-w">
-                                <img alt="" src="img/avatar3.jpg">
+                                <img alt="" src="{{ asset ('img/placeholders/default.jpeg')}}">
                             </div>
                             <div class="message-content">
                                 <h6 class="message-from">
@@ -155,7 +171,7 @@ END - Mobile Menu
                     <li>
                         <a href="#">
                             <div class="user-avatar-w">
-                                <img alt="" src="img/avatar4.jpg">
+                                <img alt="" src="{{ asset ('img/placeholders/default.jpeg')}}">
                             </div>
                             <div class="message-content">
                                 <h6 class="message-from">

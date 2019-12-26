@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends AbstractController
 {
 
+    /* ---- START -- GENERAL USER ROUTES ----- */
     public function indexPage(Request $request) {
 
 
@@ -17,7 +18,6 @@ class DefaultController extends AbstractController
 
         ));
     }
-
 
     public function myGamesPage(Request $request) {
 
@@ -33,6 +33,20 @@ class DefaultController extends AbstractController
 
         ));
     }
+    /* ---- END -- GENERAL USER ROUTES ----- */
+
+
+
+    /* ---- ADMIN ROUTES ---- */
+
+    public function adminIndexPage(Request $request) {
+
+
+        return $this->render('admin/index.html.twig', array(
+
+        ));
+    }
+
 
     public function loginPage(Request $request) {
 

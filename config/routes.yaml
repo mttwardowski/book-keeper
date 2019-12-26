@@ -1,11 +1,13 @@
-index:
-    path: /
-    controller: App\Controller\DefaultController::indexPage
-
-
+# --- AUTH SYSTEM ROUTES --- #
 auth_login:
     path: /auth/login
     controller: App\Controller\DefaultController::loginPage
+
+
+# --- GENERAL USER ROUTES --- #
+index:
+    path: /
+    controller: App\Controller\DefaultController::indexPage
 
 my_games:
     path: /my_games
@@ -14,3 +16,9 @@ my_games:
 find_games:
     path: /find_games
     controller: App\Controller\DefaultController::findGames
+
+
+# --- ADMIN USER ROUTES --- #
+admin_index:
+    path: /admin/
+    controller: App\Controller\DefaultController::adminIndexPage
