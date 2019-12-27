@@ -170,84 +170,28 @@
                         Active Bets
                     </h6>
                     <div class="element-box-tp">
+
+                        {% for bet in bets %}
                         <div class="profile-tile">
-                            <a class="profile-tile-box" href="#">
-                                <div class="pt-avatar-w">
-                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                </div>
-                                <div class="pt-user-name">
-                                    Mark Parson
-                                </div>
-                            </a>
                             <div class="profile-tile-meta">
                                 <ul>
                                     <li>
-                                        Last Login:<strong>Online Now</strong>
+                                        Pick: <strong>{{bet.pickValue}}</strong>
                                     </li>
                                     <li>
-                                        Tickets:<strong>12</strong>
+                                        Amount:<strong>${{ bet.amount }}</strong>
                                     </li>
                                     <li>
-                                        Response Time:<strong>17 hours</strong>
+                                        Date Placed: <strong>{{ bet.dateCreated | date }}</strong>
                                     </li>
                                 </ul>
                                 <div class="pt-btn">
-                                    <a class="btn btn-success btn-sm" href="#">View Game</a>
+                                    <a class="btn btn-success btn-sm" href="{{ path('game_page') }}">View Game</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-tile">
-                            <a class="profile-tile-box" href="#">
-                                <div class="pt-avatar-w">
-                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                </div>
-                                <div class="pt-user-name">
-                                    John Mayers
-                                </div>
-                            </a>
-                            <div class="profile-tile-meta">
-                                <ul>
-                                    <li>
-                                        Last Login:<strong>Online Now</strong>
-                                    </li>
-                                    <li>
-                                        Tickets:<strong>18</strong>
-                                    </li>
-                                    <li>
-                                        Response Time:<strong>2 hours</strong>
-                                    </li>
-                                </ul>
-                                <div class="pt-btn">
-                                    <a class="btn btn-secondary btn-sm" href="#">Game Ended</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profile-tile d-sm-none d-xl-flex">
-                            <a class="profile-tile-box" href="#">
-                                <div class="pt-avatar-w">
-                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                </div>
-                                <div class="pt-user-name">
-                                    Mark Parson
-                                </div>
-                            </a>
-                            <div class="profile-tile-meta">
-                                <ul>
-                                    <li>
-                                        Last Login:<strong>Online Now</strong>
-                                    </li>
-                                    <li>
-                                        Tickets:<strong>24</strong>
-                                    </li>
-                                    <li>
-                                        Response Time:<strong>4 hours</strong>
-                                    </li>
-                                </ul>
-                                <div class="pt-btn">
-                                    <a class="btn btn-success btn-sm" href="#">View Game</a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>

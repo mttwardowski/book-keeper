@@ -13,9 +13,13 @@ class DefaultController extends AbstractController
     /* ---- START -- GENERAL USER ROUTES ----- */
     public function indexPage(Request $request) {
 
+        $user = $this->getUser();
+
+        $gameBets = $this->getDoctrine()->getRepository('App:GameBet')->getMyRecentGameBets($user);
+
 
         return $this->render('pages/index.html.twig', array(
-
+            'bets'  => $gameBets
         ));
     }
 

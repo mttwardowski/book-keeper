@@ -50,6 +50,22 @@ class GameBetRepository extends ServiceEntityRepository
     }
 
 
+    /**
+     * @return GameBet[] Returns an array of GameBet objects
+     */
+    public function getMyRecentGameBets(User $user)
+    {
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.user = :val')
+            ->setParameter('val', $user)
+            ->orderBy('g.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+
     /*
     public function findOneBySomeField($value): ?GameBet
     {
