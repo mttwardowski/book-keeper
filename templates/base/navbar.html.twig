@@ -3,7 +3,10 @@
         -------------------->
 <div class="menu-mobile menu-activated-on-click color-scheme-dark">
     <div class="mm-logo-buttons-w">
-        <a class="mm-logo" href="{{ path('index')}}"><img src="{{ asset ('img/placeholders/default.jpeg')}}"><span>Book Keeper</span></a>
+        <a class="mm-logo" href="{{ path('index')}}">
+            <img src="{{ asset ('img/placeholders/default.jpeg')}}">
+            <span>Book Keeper</span>
+        </a>
         <div class="mm-buttons">
 
             <div class="mobile-menu-trigger">
@@ -19,10 +22,10 @@
             </div>
             <div class="logged-user-info-w">
                 <div class="logged-user-name">
-                    Matt Twardowski
+                    {{ app.user.firstName }} {{ app.user.lastName }}
                 </div>
                 <div class="logged-user-role">
-                    Administrator
+                    {{ app.user.email }}
                 </div>
             </div>
         </div>
