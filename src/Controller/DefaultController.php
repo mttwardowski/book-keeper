@@ -37,8 +37,10 @@ class DefaultController extends AbstractController
 
     public function gamePage(Request $request) {
 
-        return $this->render('pages/game_page.html.twig', array(
+        $gameBets = $this->getDoctrine()->getRepository('App:GameBet')->getAllGameBets();
 
+        return $this->render('pages/game_page.html.twig', array(
+            'bets'  => $gameBets
         ));
     }
     /* ---- END -- GENERAL USER ROUTES ----- */

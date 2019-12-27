@@ -1,12 +1,39 @@
 $(function() {
 
+    // Make Bet Modal Components
+    let betAmount   = $('#bet_amount_input');
+    let betPick     = $('#bet_pick_input');
+    let betSubmit   = $('#bet_submit');
 
-
+    // Initialization Functions
     init();
-
     loadGameNews();
 
+    /* ---- START OnClick SCRIPTS ---- */
 
+    betSubmit.on('click', function() {
+
+        let data = {
+            userID: $(this).data('id'),
+            pickValue: betPick.val(),
+            betAmount: betAmount.val(),
+        };
+
+        $.ajax({
+            type: 'GET',
+            url: '/api/bet/new',
+            data: data,
+            error: function(e) {
+                console.log(e);
+            },
+            success: function(response) {
+                console.log(response);
+                window.location.reload();
+            }
+        });
+
+
+    });
 
     function init() {
 

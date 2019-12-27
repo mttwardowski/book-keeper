@@ -21,6 +21,10 @@ game_page:
     path: /game/1
     controller: App\Controller\DefaultController::gamePage
 
+make_bet_action:
+    path: /api/bet/new
+    controller: App\Controller\BetController::makeBetAction
+
 # --- ADMIN USER ROUTES --- #
 admin_index:
     path: /admin/
