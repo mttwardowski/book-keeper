@@ -53,8 +53,8 @@ class GameBet
     }
 
     public function createNew(User $user, $params = array()) {
-        $this->user         = $user;
-        $this->amount       = isset($params['amount']) ? $params['amount'] : 0.00;
+        $this->user         =  $user;
+        $this->amount       =  isset($params['amount']) ? $params['amount'] : 0.00;
         $this->pick         =  isset($params['pick']) ? $params['pick'] : 1;
         $this->pickValue    =  isset($params['pickValue']) ? $params['pickValue'] : "No Team";
     }

@@ -16,11 +16,11 @@ $(function() {
         let data = {
             userID: $(this).data('id'),
             pickValue: betPick.val(),
-            betAmount: betAmount.val(),
+            amount: betAmount.val(),
         };
 
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: '/api/bet/new',
             data: data,
             error: function(e) {
