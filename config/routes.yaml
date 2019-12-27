@@ -25,6 +25,10 @@ make_bet_action:
     path: /api/bet/new
     controller: App\Controller\BetController::makeBetAction
 
+api_thread_new:
+    path: /api/game/thread/new
+    controller: App\Controller\GameController::newGameThreadAction
+
 # --- ADMIN USER ROUTES --- #
 admin_index:
     path: /admin/

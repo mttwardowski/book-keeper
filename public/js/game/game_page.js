@@ -5,11 +5,40 @@ $(function() {
     let betPick     = $('#bet_pick_input');
     let betSubmit   = $('#bet_submit');
 
+    // New Game Thread Components
+    let gameThreadInput     = $('#post_thread_input');
+    let gameThreadSubmit    = $('#post_thread_submit');
+
     // Initialization Functions
     init();
     loadGameNews();
 
     /* ---- START OnClick SCRIPTS ---- */
+
+
+    gameThreadSubmit.on('click', function() {
+
+        let data = {
+            gameID: $(this).data('game'),
+            content: gameThreadInput.val(),
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/api/game/thread/new',
+            data: data,
+            error: function(e) {
+                console.log(e);
+            },
+            success: function(response) {
+                console.log(response);
+                window.location.reload();
+            }
+        });
+
+
+
+    });
 
     betSubmit.on('click', function() {
 

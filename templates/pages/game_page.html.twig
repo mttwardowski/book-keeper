@@ -130,7 +130,7 @@
                         </div>
                         <div class="thread-actions-container">
                             <div class="thread-actions-right pt-1">
-                                <a id="post_thread_submit" href="#">Submit Thread</a>
+                                <a id="post_thread_submit" href="#" data-game="1">Submit Thread</a>
                             </div>
                         </div>
                     </div>
@@ -138,67 +138,36 @@
                 </div>
                 <hr/>
 
-                <div class="element-wrapper game-thread-container">
-                    <div class="element-box">
-                        <div class="user-details-container border-bottom">
-                            <div class="user-avatar-container">
-                                <img src="{{ asset('img/placeholders/default.jpeg') }}"/>
-                            </div>
-                            <h5 class="user-title">{{ app.user.firstName }} {{ app.user.lastName }}</h5>
-                            <p class="user-subtitle">Bet <span>Chicago Bears</span> win.</p>
-                        </div>
-                        <div class="thread-content-container">
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
-                        </div>
-                        <div class="thread-actions-container">
-                            <div class="thread-actions-right">
-                                <a href="#"><i class="os-icon os-icon-thumbs-up"></i> 10 Likes</a>
-                            </div>
+                {% if threads is empty %}
+                    <div class="element-wrapper game-thread-container">
+                        <div class="element-box">
+                            <p class="text-center">No Threads</p>
                         </div>
                     </div>
-                </div>
+                {% else %}
 
-                <div class="element-wrapper game-thread-container">
-                    <div class="element-box">
-                        <div class="user-details-container border-bottom">
-                            <div class="user-avatar-container">
-                                <img src="{{ asset('img/placeholders/default.jpeg') }}"/>
-                            </div>
-                            <h5 class="user-title">{{ app.user.firstName }} {{ app.user.lastName }}</h5>
-                            <p class="user-subtitle">Bet <span>Chicago Bears</span> win.</p>
-                        </div>
-                        <div class="thread-content-container">
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
-                        </div>
-                        <div class="thread-actions-container">
-                            <div class="thread-actions-right">
-                                <a href="#"><i class="os-icon os-icon-thumbs-up"></i> 10 Likes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="element-wrapper game-thread-container">
-                    <div class="element-box">
-                        <div class="user-details-container border-bottom">
-                            <div class="user-avatar-container">
-                                <img src="{{ asset('img/placeholders/default.jpeg') }}"/>
-                            </div>
-                            <h5 class="user-title">{{ app.user.firstName }} {{ app.user.lastName }}</h5>
-                            <p class="user-subtitle">Bet <span>Chicago Bears</span> win.</p>
-                        </div>
-                        <div class="thread-content-container">
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
-                        </div>
-                        <div class="thread-actions-container">
-                            <div class="thread-actions-right">
-                                <a href="#"><i class="os-icon os-icon-thumbs-up"></i> 10 Likes</a>
+                    {% for thread in threads %}
+                        <div class="element-wrapper game-thread-container">
+                            <div class="element-box">
+                                <div class="user-details-container border-bottom">
+                                    <div class="user-avatar-container">
+                                        <img src="{{ asset('img/placeholders/default.jpeg') }}"/>
+                                    </div>
+                                    <h5 class="user-title">{{ thread.user.firstName }} {{ thread.user.lastName }}</h5>
+                                    <p class="user-subtitle">Posted: {{ thread.dateCreated | date }}</p>
+                                </div>
+                                <div class="thread-content-container">
+                                    <p>{{ thread.content }}</p>
+                                </div>
+                                <div class="thread-actions-container">
+                                    <div class="thread-actions-right">
+                                        <a href="#"><i class="os-icon os-icon-thumbs-up"></i> 0 Likes</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
+                    {% endfor %}
+                {% endif %}
 
             </div>
         </div>
