@@ -48,6 +48,13 @@ class GameBet
      */
     private $user;
 
+    /**
+     * @var Game
+     *
+     * @ORM\ManyToOne(targetEntity="Game")
+     */
+    private $game;
+
     public function __construct() {
         $this->dateCreated = new \DateTime();
     }
@@ -131,5 +138,21 @@ class GameBet
     public function setPickValue(string $pickValue): void
     {
         $this->pickValue = $pickValue;
+    }
+
+    /**
+     * @return Game
+     */
+    public function getGame(): Game
+    {
+        return $this->game;
+    }
+
+    /**
+     * @param Game $game
+     */
+    public function setGame(Game $game): void
+    {
+        $this->game = $game;
     }
 }
