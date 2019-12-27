@@ -36,32 +36,14 @@
 
             <div class="content-i">
 
-
-
-
                 {% block body %}
                 {% endblock %}
 
-
                 {% if block("sidebar") is defined %}
-                    {% block sidebar %}
-
-                    {% endblock %}
-
+                    {% block sidebar %}{% endblock %}
                 {% endif %}
 
-
-
-
-
-
-
-
-
-
-
-
-
+                {% block modals %}{% endblock %}
 
 
                 {#            <div class="floated-colors-btn second-floated-btn">#}
@@ -131,6 +113,8 @@
         </div>
     </div>
     <div class="display-type"></div>
+
+
 </div>
 <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('bower_components/popper.js/dist/umd/popper.min.js') }}"></script>

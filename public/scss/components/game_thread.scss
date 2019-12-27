@@ -1,6 +1,11 @@
 
 
+.user-profile .up-contents {
+  padding: 0;
+}
+
 .game-thread-container {
+  padding-bottom: 0;
 
 
   .user-details-container {
@@ -40,5 +45,53 @@
       color: rgba(90, 99, 126, 0.89)
     }
   }
+
+  .thread-actions-container {
+    padding-bottom: 1em;
+
+    .thread-actions-right {
+      float: right;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}
+
+
+.game-page-members-container {
+
+
+  .element-header {
+    margin-bottom: 0;
+
+  }
+
+  .users-list-w .user-w {
+
+    .user-name {
+      padding-left: 0;
+
+      .user-role {
+        text-transform: none;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+
+    .user-action {
+      width: auto;
+      float: right;
+      text-align: right !important;
+    }
+  }
+
+
 
 }
