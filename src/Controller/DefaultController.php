@@ -33,6 +33,14 @@ class DefaultController extends AbstractController
 
         ));
     }
+
+
+    public function gamePage(Request $request) {
+
+        return $this->render('pages/game_page.html.twig', array(
+
+        ));
+    }
     /* ---- END -- GENERAL USER ROUTES ----- */
 
 

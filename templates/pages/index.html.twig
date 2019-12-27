@@ -5,314 +5,315 @@
 
 {% block body %}
 
-    <div class="row">
-        <div class="col-sm-12 col-lg-8">
-            <div class="element-balances justify-content-between mobile-full-width">
-                <div class="balance balance-v2">
-                    <div class="balance-title">
-                        Your Portfolio Balance
+    <div class="content-box">
+        <div class="row">
+            <div class="col-sm-12 col-lg-8">
+                <div class="element-balances justify-content-between mobile-full-width">
+                    <div class="balance balance-v2">
+                        <div class="balance-title">
+                            Your Portfolio Balance
+                        </div>
+                        <div class="balance-value">
+                            <span class="d-xxl-none">$0.00</span>
+                            <span class="d-none d-xxl-inline-block">$0.00</span>
+                        </div>
                     </div>
-                    <div class="balance-value">
-                        <span class="d-xxl-none">$0.00</span>
-                        <span class="d-none d-xxl-inline-block">$0.00</span>
+                </div>
+                <div class="element-wrapper pb-4 mb-4 border-bottom">
+                    <div class="element-box-tp">
+                        <a id="get-all-games" class="btn btn-primary" href="#"><i class="os-icon os-icon-refresh-ccw"></i><span>Update</span></a>
+                        <a class="btn btn-grey" href="#"><i class="os-icon os-icon-log-out"></i><span>Withdraw</span></a>
+                        <a class="btn btn-grey d-none d-sm-inline-block" href="#"><i class="os-icon os-icon-plus-circle"></i><span>Add Funds</span></a>
+                    </div>
+                </div>
+                <div class="element-wrapper compact">
+                    <div class="element-box-tp">
+                        <div class="element-actions d-none d-sm-block">
+                            <form class="form-inline justify-content-sm-end">
+                                <label class="smaller" for="">Show Period:</label><select class="form-control form-control-sm form-control-faded">
+                                    <option selected="true">
+                                        Last 30 days
+                                    </option>
+                                    <option>
+                                        This Week
+                                    </option>
+                                    <option>
+                                        This Month
+                                    </option>
+                                    <option>
+                                        Today
+                                    </option>
+                                </select>
+                            </form>
+                        </div>
+                        <h6 class="element-box-header">
+                            Balance History
+                        </h6>
+                        <div class="el-chart-w">
+                            <canvas data-chart-data="13,28,19,24,43,49,40,35,42,46,38,32,45" height="50" id="liteLineChartV3" width="300"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="element-wrapper pb-4 mb-4 border-bottom">
-                <div class="element-box-tp">
-                    <a id="get-all-games" class="btn btn-primary" href="#"><i class="os-icon os-icon-refresh-ccw"></i><span>Update</span></a>
-                    <a class="btn btn-grey" href="#"><i class="os-icon os-icon-log-out"></i><span>Withdraw</span></a>
-                    <a class="btn btn-grey d-none d-sm-inline-block" href="#"><i class="os-icon os-icon-plus-circle"></i><span>Add Funds</span></a>
-                </div>
-            </div>
-            <div class="element-wrapper compact">
-                <div class="element-box-tp">
+            <div class="col-12 col-lg-4">
+
+                <div class="element-wrapper compact">
                     <div class="element-actions d-none d-sm-block">
                         <form class="form-inline justify-content-sm-end">
-                            <label class="smaller" for="">Show Period:</label><select class="form-control form-control-sm form-control-faded">
-                                <option selected="true">
-                                    Last 30 days
+                            <label class="smaller" for="">News For</label>
+                            <select class="form-control form-control-sm form-control-faded">
+                                <option value="Pending">
+                                    All Sports
                                 </option>
-                                <option>
-                                    This Week
+                                <option value="Active">
+                                    NFL
                                 </option>
-                                <option>
-                                    This Month
-                                </option>
-                                <option>
-                                    Today
+                                <option value="Cancelled">
+                                    NBA
                                 </option>
                             </select>
                         </form>
                     </div>
-                    <h6 class="element-box-header">
-                        Balance History
+                    <h6 class="element-header">
+                        Recent Sports News
                     </h6>
-                    <div class="el-chart-w">
-                        <canvas data-chart-data="13,28,19,24,43,49,40,35,42,46,38,32,45" height="50" id="liteLineChartV3" width="300"></canvas>
+                    <div  class="element-box-tp">
+
+                        <div id="recent-news-container">
+
+                        </div>
+                        <a class="centered-load-more-link" href="#"><span>Read More</span></a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4">
 
-            <div class="element-wrapper compact">
-                <div class="element-actions d-none d-sm-block">
-                    <form class="form-inline justify-content-sm-end">
-                        <label class="smaller" for="">News For</label>
-                        <select class="form-control form-control-sm form-control-faded">
-                            <option value="Pending">
-                                All Sports
-                            </option>
-                            <option value="Active">
-                                NFL
-                            </option>
-                            <option value="Cancelled">
-                                NBA
-                            </option>
-                        </select>
-                    </form>
-                </div>
-                <h6 class="element-header">
-                    Recent Sports News
-                </h6>
-                <div  class="element-box-tp">
-
-                    <div id="recent-news-container">
-
-                    </div>
-                    <a class="centered-load-more-link" href="#"><span>Read More</span></a>
-                </div>
             </div>
 
         </div>
+        <div class="row pt-2">
+            <div class="col-6 col-sm-3 col-xxl-2">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Total Earnings
+                    </div>
+                    <div class="value">
+                        $7,484
+                    </div>
+                    <div class="trending trending-up">
+                        <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3 col-xxl-2">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Available Balance
+                    </div>
+                    <div class="value">
+                        $3,248
+                    </div>
+                    <div class="trending trending-down">
+                        <span>12%</span><i class="os-icon os-icon-arrow-down6"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3 col-xxl-2">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Amount at Risk
+                    </div>
+                    <div class="value text-danger">
+                        $784.12
+                    </div>
 
-    </div>
-    <div class="row pt-2">
-        <div class="col-6 col-sm-3 col-xxl-2">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Total Earnings
-                </div>
-                <div class="value">
-                    $7,484
-                </div>
-                <div class="trending trending-up">
-                    <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-6 col-sm-3 col-xxl-2">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Available Balance
-                </div>
-                <div class="value">
-                    $3,248
-                </div>
-                <div class="trending trending-down">
-                    <span>12%</span><i class="os-icon os-icon-arrow-down6"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-6 col-sm-3 col-xxl-2">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Amount at Risk
-                </div>
-                <div class="value text-danger">
-                    $784.12
-                </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3 col-xxl-2">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Win/Loss
+                    </div>
+                    <div class="value">
+                        0.47
+                    </div>
+                    <div class="trending trending-up">
+                        <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-xxl-2 d-sm-none d-xxl-block">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Bonus Points
+                    </div>
+                    <div class="value">
+                        0
+                    </div>
 
-            </a>
-        </div>
-        <div class="col-6 col-sm-3 col-xxl-2">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Win/Loss
-                </div>
-                <div class="value">
-                    0.47
-                </div>
-                <div class="trending trending-up">
-                    <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-6 col-xxl-2 d-sm-none d-xxl-block">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Bonus Points
-                </div>
-                <div class="value">
-                    0
-                </div>
+                </a>
+            </div>
+            <div class="col-6 col-xxl-2 d-sm-none d-xxl-block">
+                <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                    <div class="label">
+                        Free Plays
+                    </div>
+                    <div class="value">
+                        0
+                    </div>
 
-            </a>
+                </a>
+            </div>
         </div>
-        <div class="col-6 col-xxl-2 d-sm-none d-xxl-block">
-            <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                <div class="label">
-                    Free Plays
-                </div>
-                <div class="value">
-                    0
-                </div>
-
-            </a>
-        </div>
-    </div>
-    <div class="row pt-4">
-        <div class="col-12 col-lg-4">
-            <div class="element-wrapper">
-                <h6 class="element-header">
-                    Active Bets
-                </h6>
-                <div class="element-box-tp">
-                    <div class="profile-tile">
-                        <a class="profile-tile-box" href="#">
-                            <div class="pt-avatar-w">
-                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                            </div>
-                            <div class="pt-user-name">
-                                Mark Parson
-                            </div>
-                        </a>
-                        <div class="profile-tile-meta">
-                            <ul>
-                                <li>
-                                    Last Login:<strong>Online Now</strong>
-                                </li>
-                                <li>
-                                    Tickets:<strong>12</strong>
-                                </li>
-                                <li>
-                                    Response Time:<strong>17 hours</strong>
-                                </li>
-                            </ul>
-                            <div class="pt-btn">
-                                <a class="btn btn-success btn-sm" href="#">Send Message</a>
+        <div class="row pt-4">
+            <div class="col-12 col-lg-4">
+                <div class="element-wrapper">
+                    <h6 class="element-header">
+                        Active Bets
+                    </h6>
+                    <div class="element-box-tp">
+                        <div class="profile-tile">
+                            <a class="profile-tile-box" href="#">
+                                <div class="pt-avatar-w">
+                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                </div>
+                                <div class="pt-user-name">
+                                    Mark Parson
+                                </div>
+                            </a>
+                            <div class="profile-tile-meta">
+                                <ul>
+                                    <li>
+                                        Last Login:<strong>Online Now</strong>
+                                    </li>
+                                    <li>
+                                        Tickets:<strong>12</strong>
+                                    </li>
+                                    <li>
+                                        Response Time:<strong>17 hours</strong>
+                                    </li>
+                                </ul>
+                                <div class="pt-btn">
+                                    <a class="btn btn-success btn-sm" href="#">Send Message</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="profile-tile">
-                        <a class="profile-tile-box" href="#">
-                            <div class="pt-avatar-w">
-                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                            </div>
-                            <div class="pt-user-name">
-                                John Mayers
-                            </div>
-                        </a>
-                        <div class="profile-tile-meta">
-                            <ul>
-                                <li>
-                                    Last Login:<strong>Online Now</strong>
-                                </li>
-                                <li>
-                                    Tickets:<strong>18</strong>
-                                </li>
-                                <li>
-                                    Response Time:<strong>2 hours</strong>
-                                </li>
-                            </ul>
-                            <div class="pt-btn">
-                                <a class="btn btn-secondary btn-sm" href="#">Send Message</a>
+                        <div class="profile-tile">
+                            <a class="profile-tile-box" href="#">
+                                <div class="pt-avatar-w">
+                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                </div>
+                                <div class="pt-user-name">
+                                    John Mayers
+                                </div>
+                            </a>
+                            <div class="profile-tile-meta">
+                                <ul>
+                                    <li>
+                                        Last Login:<strong>Online Now</strong>
+                                    </li>
+                                    <li>
+                                        Tickets:<strong>18</strong>
+                                    </li>
+                                    <li>
+                                        Response Time:<strong>2 hours</strong>
+                                    </li>
+                                </ul>
+                                <div class="pt-btn">
+                                    <a class="btn btn-secondary btn-sm" href="#">Send Message</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="profile-tile d-sm-none d-xl-flex">
-                        <a class="profile-tile-box" href="#">
-                            <div class="pt-avatar-w">
-                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                            </div>
-                            <div class="pt-user-name">
-                                Mark Parson
-                            </div>
-                        </a>
-                        <div class="profile-tile-meta">
-                            <ul>
-                                <li>
-                                    Last Login:<strong>Online Now</strong>
-                                </li>
-                                <li>
-                                    Tickets:<strong>24</strong>
-                                </li>
-                                <li>
-                                    Response Time:<strong>4 hours</strong>
-                                </li>
-                            </ul>
-                            <div class="pt-btn">
-                                <a class="btn btn-success btn-sm" href="#">Send Message</a>
+                        <div class="profile-tile d-sm-none d-xl-flex">
+                            <a class="profile-tile-box" href="#">
+                                <div class="pt-avatar-w">
+                                    <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                </div>
+                                <div class="pt-user-name">
+                                    Mark Parson
+                                </div>
+                            </a>
+                            <div class="profile-tile-meta">
+                                <ul>
+                                    <li>
+                                        Last Login:<strong>Online Now</strong>
+                                    </li>
+                                    <li>
+                                        Tickets:<strong>24</strong>
+                                    </li>
+                                    <li>
+                                        Response Time:<strong>4 hours</strong>
+                                    </li>
+                                </ul>
+                                <div class="pt-btn">
+                                    <a class="btn btn-success btn-sm" href="#">Send Message</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-lg-8">
-            <div class="element-wrapper">
-                <h6 class="element-header">
-                    Games on Today
-                </h6>
-                <div class="element-box-tp">
-                    <div class="table-responsive">
-                        <table class="table table-padded">
-                            <thead>
-                            <tr>
-                                <th>
-                                    Game
-                                </th>
+            <div class="col-12 col-lg-8">
+                <div class="element-wrapper">
+                    <h6 class="element-header">
+                        Games on Today
+                    </h6>
+                    <div class="element-box-tp">
+                        <div class="table-responsive">
+                            <table class="table table-padded">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        Game
+                                    </th>
 
-                                <th class="text-center">
-                                    Ticket Category
-                                </th>
-                                <th>
-                                    Last Reply Date
-                                </th>
-                                <th>
-                                    Details
-                                </th>
-                                <th>
-                                    Actions
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody class="games-table-body" id="my-games-table-body">
-                            <tr>
-                                <td class="nowrap">
-                                    <div class="game-table-teams">
-                                        <h3>Buffalo Bills <span>(10-3)</span></h3>
-                                        <h3>Chicago Bears <span>(8-7)</span></h3>
-                                    </div>
-                                </td>
+                                    <th class="text-center">
+                                        Ticket Category
+                                    </th>
+                                    <th>
+                                        Last Reply Date
+                                    </th>
+                                    <th>
+                                        Details
+                                    </th>
+                                    <th>
+                                        Actions
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="games-table-body" id="my-games-table-body">
+                                <tr>
+                                    <td class="nowrap">
+                                        <div class="game-table-teams">
+                                            <h3>Buffalo Bills <span>(10-3)</span></h3>
+                                            <h3>Chicago Bears <span>(8-7)</span></h3>
+                                        </div>
+                                    </td>
 
-                                <td>
-                                    <span>Today</span><span class="smaller lighter">1:52am</span>
-                                </td>
-                                <td class="text-center pl-0 pr-0">
-                                    <a class="badge badge-success-inverted" href="">Active</a>
-                                </td>
-                                <td class="nowrap">
-                                    <div class="game-table-details">
-                                        <h3>Testing</h3>
-                                        <p>NCAAF</p>
-                                    </div>
-                                </td>
-                                <td class="row-actions">
-                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
-                                </td>
-                            </tr>
+                                    <td>
+                                        <span>Today</span><span class="smaller lighter">1:52am</span>
+                                    </td>
+                                    <td class="text-center pl-0 pr-0">
+                                        <a class="badge badge-success-inverted" href="">Active</a>
+                                    </td>
+                                    <td class="nowrap">
+                                        <div class="game-table-details">
+                                            <h3>Testing</h3>
+                                            <p>NCAAF</p>
+                                        </div>
+                                    </td>
+                                    <td class="row-actions">
+                                        <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                    </td>
+                                </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}
 
 

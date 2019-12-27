@@ -4,335 +4,334 @@
 {% block title %}Admin Home{% endblock %}
 
 {% block body %}
+    <div class="content-box">
+        <div class="row  border-bottom">
+            <div class="col-sm-12 col-lg-6">
+                <div class="element-balances justify-content-between mobile-full-width">
+                    <div class="balance balance-v2">
+                        <div class="balance-title">
+                            Your Portfolio Balance
+                        </div>
+                        <div class="balance-value">
+                            <span class="d-xxl-none">$72,245</span><span class="d-none d-xxl-inline-block">$171,473</span><span class="trending trending-down-basic"><span>%12</span><i class="os-icon os-icon-arrow-2-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-wrapper pb-4 mb-4">
+                    <div class="element-box-tp">
+                        <a id="get-all-games" class="btn btn-primary" href="#"><i class="os-icon os-icon-refresh-ccw"></i><span>Update</span></a>
+                        <a class="btn btn-grey" href="#"><i class="os-icon os-icon-log-out"></i><span>Withdraw</span></a>
+                        <a class="btn btn-grey d-none d-sm-inline-block" href="#"><i class="os-icon os-icon-plus-circle"></i><span>Add Funds</span></a>
+                    </div>
+                </div>
+                <div class="element-wrapper compact">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row">
 
-    <div class="row  border-bottom">
-        <div class="col-sm-12 col-lg-6">
-            <div class="element-balances justify-content-between mobile-full-width">
-                <div class="balance balance-v2">
-                    <div class="balance-title">
-                        Your Portfolio Balance
+                    <div class="col-6 col-lg-4">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Total Earnings
+                            </div>
+                            <div class="value">
+                                $7,484
+                            </div>
+                            <div class="trending trending-up">
+                                <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
+                            </div>
+                        </a>
                     </div>
-                    <div class="balance-value">
-                        <span class="d-xxl-none">$72,245</span><span class="d-none d-xxl-inline-block">$171,473</span><span class="trending trending-down-basic"><span>%12</span><i class="os-icon os-icon-arrow-2-down"></i></span>
+                    <div class="col-6 col-lg-4">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Available Balance
+                            </div>
+                            <div class="value">
+                                $3,248
+                            </div>
+                            <div class="trending trending-down">
+                                <span>12%</span><i class="os-icon os-icon-arrow-down6"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Amount at Risk
+                            </div>
+                            <div class="value text-danger">
+                                $784.12
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Win/Loss
+                            </div>
+                            <div class="value">
+                                0.47
+                            </div>
+                            <div class="trending trending-up">
+                                <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 d-sm-none d-xxl-block">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Bonus Points
+                            </div>
+                            <div class="value">
+                                0
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 d-sm-none d-xxl-block">
+                        <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
+                            <div class="label">
+                                Free Plays
+                            </div>
+                            <div class="value">
+                                0
+                            </div>
+
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="element-wrapper pb-4 mb-4">
-                <div class="element-box-tp">
-                    <a id="get-all-games" class="btn btn-primary" href="#"><i class="os-icon os-icon-refresh-ccw"></i><span>Update</span></a>
-                    <a class="btn btn-grey" href="#"><i class="os-icon os-icon-log-out"></i><span>Withdraw</span></a>
-                    <a class="btn btn-grey d-none d-sm-inline-block" href="#"><i class="os-icon os-icon-plus-circle"></i><span>Add Funds</span></a>
-                </div>
-            </div>
-            <div class="element-wrapper compact">
-            </div>
+
         </div>
-        <div class="col-12 col-lg-6">
-            <div class="row">
 
-                <div class="col-6 col-lg-4">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Total Earnings
+        <div class="row pt-4">
+            <div class="col-12 col-lg-6">
+                <div class="element-wrapper">
+                    <div class="element-box-tp">
+                        <div class="table-responsive">
+                            <table class="table table-padded">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th class="text-center">
+                                        Category
+                                    </th>
+                                    <th class="text-right">
+                                        Amount
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller green"></span><span>Complete</span>
+                                    </td>
+                                    <td>
+                                        <span>Today</span><span class="smaller lighter">1:52am</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company1.png" style="height: 25px;"><span>Banana Shakes LLC</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-success" href="">Shopping</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-success">+ 1,250 USD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller red"></span><span>Declined</span>
+                                    </td>
+                                    <td>
+                                        <span>Jan 19th</span><span class="smaller lighter">3:22pm</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company2.png" style="height: 25px;"><span>Stripe Payment Processing</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-danger" href="">Cafe</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-success">+ 952.23 USD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                    </td>
+                                    <td>
+                                        <span>Yesterday</span><span class="smaller lighter">7:45am</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company3.png" style="height: 25px;"><span>MailChimp Services</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-warning" href="">Restaurants</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-danger">- 320 USD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                    </td>
+                                    <td>
+                                        <span>Jan 23rd</span><span class="smaller lighter">2:12pm</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company1.png" style="height: 25px;"><span>Starbucks Cafe</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-primary" href="">Shopping</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-success">+ 17.99 USD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller green"></span><span>Complete</span>
+                                    </td>
+                                    <td>
+                                        <span>Jan 12th</span><span class="smaller lighter">9:51am</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company4.png" style="height: 25px;"><span>Ebay Marketplace</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-danger" href="">Groceries</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-danger">- 244 USD</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                    </td>
+                                    <td>
+                                        <span>Jan 9th</span><span class="smaller lighter">12:45pm</span>
+                                    </td>
+                                    <td class="cell-with-media">
+                                        <img alt="" src="img/company2.png" style="height: 25px;"><span>Envato Templates Inc</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="badge badge-primary" href="">Business</a>
+                                    </td>
+                                    <td class="text-right bolder nowrap">
+                                        <span class="text-success">+ 340 USD</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="value">
-                            $7,484
-                        </div>
-                        <div class="trending trending-up">
-                            <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
-                        </div>
-                    </a>
+                        <br/><br/>
+                        <br/><br/>
+                    </div>
                 </div>
-                <div class="col-6 col-lg-4">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Available Balance
-                        </div>
-                        <div class="value">
-                            $3,248
-                        </div>
-                        <div class="trending trending-down">
-                            <span>12%</span><i class="os-icon os-icon-arrow-down6"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Amount at Risk
-                        </div>
-                        <div class="value text-danger">
-                            $784.12
-                        </div>
+            </div>
 
-                    </a>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Win/Loss
+            <div class="col-12 col-lg-6">
+                <div class="element-wrapper">
+                    <h6 class="element-header">
+                        Players
+                    </h6>
+                    <div class="element-box-tp">
+                        <div class="inline-profile-tiles">
+                            <div class="row">
+                                <div class="col-4 col-sm-3 col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box faded" href="#">
+                                            <div class="pt-new-icon">
+                                                <i class="os-icon os-icon-plus"></i>
+                                            </div>
+                                            <div class="pt-user-name">
+                                                New<br> Account
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-3 col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box" href="#">
+                                            <div class="pt-avatar-w">
+                                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                            </div>
+                                            <div class="pt-user-name">
+                                                Kelly<br> Neymayers
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-3 col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box" href="#">
+                                            <div class="pt-avatar-w">
+                                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                            </div>
+                                            <div class="pt-user-name">
+                                                Ben<br> Gossman
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-3 col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box" href="#">
+                                            <div class="pt-avatar-w">
+                                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                            </div>
+                                            <div class="pt-user-name">
+                                                Kimson<br> Broker
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-sm-none d-xxl-block col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box" href="#">
+                                            <div class="pt-avatar-w">
+                                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                            </div>
+                                            <div class="pt-user-name">
+                                                Jake<br> Gilbertson
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-sm-none d-xxl-block col-xxl-2">
+                                    <div class="profile-tile profile-tile-inlined">
+                                        <a class="profile-tile-box" href="#">
+                                            <div class="pt-avatar-w">
+                                                <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
+                                            </div>
+                                            <div class="pt-user-name">
+                                                Mary<br> Clintons
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="value">
-                            0.47
-                        </div>
-                        <div class="trending trending-up">
-                            <span>12%</span><i class="os-icon os-icon-arrow-up6"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-4 d-sm-none d-xxl-block">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Bonus Points
-                        </div>
-                        <div class="value">
-                            0
-                        </div>
-
-                    </a>
-                </div>
-                <div class="col-6 col-lg-4 d-sm-none d-xxl-block">
-                    <a class="element-box el-tablo centered trend-in-corner smaller" href="#">
-                        <div class="label">
-                            Free Plays
-                        </div>
-                        <div class="value">
-                            0
-                        </div>
-
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-
-    <div class="row pt-4">
-        <div class="col-12 col-lg-6">
-            <div class="element-wrapper">
-                <div class="element-box-tp">
-                    <div class="table-responsive">
-                        <table class="table table-padded">
-                            <thead>
-                            <tr>
-                                <th>
-                                    Status
-                                </th>
-                                <th>
-                                    Date
-                                </th>
-                                <th>
-                                    Description
-                                </th>
-                                <th class="text-center">
-                                    Category
-                                </th>
-                                <th class="text-right">
-                                    Amount
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller green"></span><span>Complete</span>
-                                </td>
-                                <td>
-                                    <span>Today</span><span class="smaller lighter">1:52am</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company1.png" style="height: 25px;"><span>Banana Shakes LLC</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-success" href="">Shopping</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-success">+ 1,250 USD</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller red"></span><span>Declined</span>
-                                </td>
-                                <td>
-                                    <span>Jan 19th</span><span class="smaller lighter">3:22pm</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company2.png" style="height: 25px;"><span>Stripe Payment Processing</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-danger" href="">Cafe</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-success">+ 952.23 USD</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
-                                </td>
-                                <td>
-                                    <span>Yesterday</span><span class="smaller lighter">7:45am</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company3.png" style="height: 25px;"><span>MailChimp Services</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-warning" href="">Restaurants</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-danger">- 320 USD</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
-                                </td>
-                                <td>
-                                    <span>Jan 23rd</span><span class="smaller lighter">2:12pm</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company1.png" style="height: 25px;"><span>Starbucks Cafe</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-primary" href="">Shopping</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-success">+ 17.99 USD</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller green"></span><span>Complete</span>
-                                </td>
-                                <td>
-                                    <span>Jan 12th</span><span class="smaller lighter">9:51am</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company4.png" style="height: 25px;"><span>Ebay Marketplace</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-danger" href="">Groceries</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-danger">- 244 USD</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap">
-                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
-                                </td>
-                                <td>
-                                    <span>Jan 9th</span><span class="smaller lighter">12:45pm</span>
-                                </td>
-                                <td class="cell-with-media">
-                                    <img alt="" src="img/company2.png" style="height: 25px;"><span>Envato Templates Inc</span>
-                                </td>
-                                <td class="text-center">
-                                    <a class="badge badge-primary" href="">Business</a>
-                                </td>
-                                <td class="text-right bolder nowrap">
-                                    <span class="text-success">+ 340 USD</span>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br/><br/>
-                    <br/><br/>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6">
-            <div class="element-wrapper">
-                <h6 class="element-header">
-                    Players
-                </h6>
-                <div class="element-box-tp">
-                    <div class="inline-profile-tiles">
-                        <div class="row">
-                            <div class="col-4 col-sm-3 col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box faded" href="#">
-                                        <div class="pt-new-icon">
-                                            <i class="os-icon os-icon-plus"></i>
-                                        </div>
-                                        <div class="pt-user-name">
-                                            New<br> Account
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 col-sm-3 col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box" href="#">
-                                        <div class="pt-avatar-w">
-                                            <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                        </div>
-                                        <div class="pt-user-name">
-                                            Kelly<br> Neymayers
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 col-sm-3 col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box" href="#">
-                                        <div class="pt-avatar-w">
-                                            <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                        </div>
-                                        <div class="pt-user-name">
-                                            Ben<br> Gossman
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 col-sm-3 col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box" href="#">
-                                        <div class="pt-avatar-w">
-                                            <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                        </div>
-                                        <div class="pt-user-name">
-                                            Kimson<br> Broker
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 d-sm-none d-xxl-block col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box" href="#">
-                                        <div class="pt-avatar-w">
-                                            <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                        </div>
-                                        <div class="pt-user-name">
-                                            Jake<br> Gilbertson
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 d-sm-none d-xxl-block col-xxl-2">
-                                <div class="profile-tile profile-tile-inlined">
-                                    <a class="profile-tile-box" href="#">
-                                        <div class="pt-avatar-w">
-                                            <img alt="" src="{{ asset('img/placeholders/default.jpeg') }}">
-                                        </div>
-                                        <div class="pt-user-name">
-                                            Mary<br> Clintons
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
 {% endblock %}
 
 

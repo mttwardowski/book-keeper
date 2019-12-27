@@ -6,9 +6,6 @@ $(function() {
     init();
 
 
-
-
-
     function init() {
 
         $('#page-link-find-games').addClass('selected');
@@ -38,7 +35,7 @@ $(function() {
                     };
                     console.log(data);
 
-                    html = "<div class=\"col-12 col-md-4 col-lg-3\">\n" +
+                    html = "<div class=\"col-12 col-md-4 col-lg-3\"><a href='/game/1'>\n" +
                         "            <div class=\"element-wrapper game-card\">\n" +
                         "                <div class=\"element-box\">\n" +
                         "                    <span class=\"badge badge-primary float-right\">\n" +
@@ -50,7 +47,7 @@ $(function() {
                         "                    </div>\n" +
                         "                </div>\n" +
                         "            </div>\n" +
-                        "        </div>";
+                        "        </a></div>";
 
                     gamesNFL.append(html);
 

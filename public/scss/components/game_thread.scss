@@ -1,0 +1,44 @@
+
+
+.game-thread-container {
+
+
+  .user-details-container {
+
+    .user-avatar-container {
+      float:left;
+      padding-right: 0.6em;
+
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+    }
+
+    .user-title {
+      font-weight: 600;
+      font-size: 0.9em;
+      margin-bottom: 0;
+    }
+
+    .user-subtitle {
+      font-size: 0.8em;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  .thread-content-container {
+    padding-top: 1em;
+
+
+    p {
+      color: rgba(90, 99, 126, 0.89)
+    }
+  }
+
+}

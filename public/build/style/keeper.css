@@ -11,4 +11,24 @@
     .game-card .element-box .game-card-title h4 span {
       font-weight: 600; }
 
+.game-thread-container .user-details-container .user-avatar-container {
+  float: left;
+  padding-right: 0.6em; }
+  .game-thread-container .user-details-container .user-avatar-container img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; }
+.game-thread-container .user-details-container .user-title {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 0; }
+.game-thread-container .user-details-container .user-subtitle {
+  font-size: 0.8em; }
+  .game-thread-container .user-details-container .user-subtitle span {
+    font-weight: 600; }
+.game-thread-container .thread-content-container {
+  padding-top: 1em; }
+  .game-thread-container .thread-content-container p {
+    color: rgba(90, 99, 126, 0.89); }
+
 /*# sourceMappingURL=keeper.css.map */
