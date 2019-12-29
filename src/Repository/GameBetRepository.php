@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Game;
 use App\Entity\GameBet;
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -21,12 +22,15 @@ class GameBetRepository extends ServiceEntityRepository
     }
 
     /**
-    * @return GameBet[] Returns an array of GameBet objects
-    */
-    public function getAllGameBets()
+     * @param Game $game
+     * @return GameBet[] Returns an array of GameBet objects
+     */
+    public function getAllGameBets(Game $game)
     {
         return $this->createQueryBuilder('g')
             ->andWhere('g.pick = 1')
+            ->andWhere('g.game = :game')
+            ->setParameter('game', $game)
             ->orderBy('g.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()

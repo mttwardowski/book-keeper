@@ -18,8 +18,8 @@ find_games:
     controller: App\Controller\DefaultController::findGames
 
 game_page:
-    path: /game/1
-    controller: App\Controller\DefaultController::gamePage
+    path: /game
+    controller: App\Controller\GameController::gamePage
 
 make_bet_action:
     path: /api/bet/new

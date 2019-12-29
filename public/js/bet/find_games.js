@@ -35,7 +35,7 @@ $(function() {
                     };
                     console.log(data);
 
-                    html = "<div class=\"col-12 col-md-4 col-lg-3\"><a href='/game/1'>\n" +
+                    html = "<div class=\"col-12 col-md-4 col-lg-3\"><a href='/game/?gameID=1'>\n" +
                         "            <div class=\"element-wrapper game-card\">\n" +
                         "                <div class=\"element-box\">\n" +
                         "                    <span class=\"badge badge-primary float-right\">\n" +
@@ -50,9 +50,6 @@ $(function() {
                         "        </a></div>";
 
                     gamesNFL.append(html);
-
-
-
 
                 });
 
