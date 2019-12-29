@@ -4,7 +4,25 @@ $(function() {
     let gamesNFL    = $('#find_games_nfl');
 
     init();
+    // getSportsData();
 
+
+    function getSportsData() {
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://therundown-therundown-v1.p.rapidapi.com/sports",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "therundown-therundown-v1.p.rapidapi.com",
+                "x-rapidapi-key": "231f91c2f7msh01febf018c19e3ap11db12jsn84cad05a5b26"
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    }
 
     function init() {
 

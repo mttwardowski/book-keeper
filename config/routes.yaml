@@ -29,6 +29,10 @@ api_thread_new:
     path: /api/game/thread/new
     controller: App\Controller\GameController::newGameThreadAction
 
+api_get_sports_list:
+    path: /api/data/sports
+    controller: App\Controller\DataController::getSportsListAction
+
 # --- ADMIN USER ROUTES --- #
 admin_index:
     path: /admin/
