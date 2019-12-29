@@ -31,13 +31,6 @@ class DefaultController extends AbstractController
         ));
     }
 
-    public function findGames(Request $request) {
-
-        return $this->render('pages/bet/find_games.html.twig', array(
-
-        ));
-    }
-
 
 
     /* ---- END -- GENERAL USER ROUTES ----- */

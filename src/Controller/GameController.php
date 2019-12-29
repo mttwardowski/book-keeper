@@ -12,6 +12,14 @@ use Symfony\Component\HttpFoundation\Request;
 class GameController extends AbstractController
 {
 
+    public function findGames(Request $request) {
+
+        $sports = $this->getDoctrine()->getRepository('App:Sport')->getAllActiveSports();
+
+        return $this->render('pages/bet/find_games.html.twig', array(
+            'sports'    => $sports,
+        ));
+    }
 
     public function gamePage(Request $request) {
 

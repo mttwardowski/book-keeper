@@ -11,18 +11,21 @@
                 <div class="os-tabs-w">
                     <div class="os-tabs-controls os-tabs-complex">
                         <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a aria-expanded="false" class="nav-link active" data-toggle="tab" href="#tab_nfl"><span class="tab-label">NFL</span><span class="tab-value">22</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nba"><span class="tab-label">NBA</span><span class="tab-value">0</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_mlb"><span class="tab-label">MLB</span><span class="tab-value">0</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nhl"><span class="tab-label">NHL</span><span class="tab-value">0</span></a>
-                            </li>
+                            {% for sport in sports %}
+                                <li class="nav-item">
+                                    <a id="tab_sport_{{ sport.id }}" data-id="{{ sport.id }}" class="nav-link" data-toggle="tab" href="#tab_{{ sport.id }}"><span class="tab-label">{{ sport.name }}</span><span class="tab-value">0</span></a>
+                                </li>
+                            {% endfor %}
+
+{#                            <li class="nav-item">#}
+{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nba"><span class="tab-label">NBA</span><span class="tab-value">0</span></a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_mlb"><span class="tab-label">MLB</span><span class="tab-value">0</span></a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nhl"><span class="tab-label">NHL</span><span class="tab-value">0</span></a>#}
+{#                            </li>#}
                         </ul>
                     </div>
                 </div>

@@ -15,23 +15,27 @@ my_games:
 
 find_games:
     path: /find_games
-    controller: App\Controller\DefaultController::findGames
+    controller: App\Controller\GameController::findGames
 
 game_page:
     path: /game
     controller: App\Controller\GameController::gamePage
 
-make_bet_action:
-    path: /api/bet/new
-    controller: App\Controller\BetController::makeBetAction
-
 api_thread_new:
     path: /api/game/thread/new
     controller: App\Controller\GameController::newGameThreadAction
 
+make_bet_action:
+    path: /api/bet/new
+    controller: App\Controller\BetController::makeBetAction
+
 api_get_sports_list:
     path: /api/data/sports
     controller: App\Controller\DataController::getSportsListAction
+
+api_update_games:
+    path: /api/data/games/update
+    controller: App\Controller\DataController::updateGames
 
 # --- ADMIN USER ROUTES --- #
 admin_index:

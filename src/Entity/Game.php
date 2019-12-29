@@ -34,13 +34,46 @@ class Game
     private $teams;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=255)
+     */
+    private $eventID;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=2056)
+     */
+    private $gameData;
+
+    /* --- ManyToOne SQL Relationships --- */
+
+    /**
+     * @var Sport
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entity\Sport")
+     */
+    private $sport;
+
+    /* --- OneToMany SQL Relationships --- */
+
+    /**
      * @ORM\OneToMany(targetEntity="App\Entity\GameThread", mappedBy="game")
      */
     private $gameThreads;
 
     public function __construct()
     {
+        $this->dateCreated = new \DateTime();
         $this->gameThreads = new ArrayCollection();
+    }
+
+    public function createNew($params = array()) {
+        $this->title = isset($params['title']) ? $params['title'] : "No Title";
+        $this->teams = isset($params['teams']) ? $params['teams'] : "[]";
+        $this->eventID  = isset($params['eventID']) ? $params['eventID'] : "0";
+        $this->gameData = isset($params['gameData']) ? $params['gameData'] : "[]";
     }
 
     public function getId(): ?int
@@ -113,5 +146,53 @@ class Game
         }
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEventID(): string
+    {
+        return $this->eventID;
+    }
+
+    /**
+     * @param string $eventID
+     */
+    public function setEventID(string $eventID): void
+    {
+        $this->eventID = $eventID;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGameData(): string
+    {
+        return $this->gameData;
+    }
+
+    /**
+     * @param string $gameData
+     */
+    public function setGameData(string $gameData): void
+    {
+        $this->gameData = $gameData;
+    }
+
+    /**
+     * @return Sport
+     */
+    public function getSport(): Sport
+    {
+        return $this->sport;
+    }
+
+    /**
+     * @param Sport $sport
+     */
+    public function setSport(Sport $sport): void
+    {
+        $this->sport = $sport;
     }
 }

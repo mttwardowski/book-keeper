@@ -4,7 +4,9 @@
 namespace App\Controller;
 
 
+use App\Entity\Game;
 use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -16,6 +18,51 @@ use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
 class DataController extends AbstractController
 {
+
+    public function updateGames(LoggerInterface $logger, Request $request) {
+        if ($request->isXmlHttpRequest()) {
+
+            $user = $this->getUser();
+            $params = $request->request->all();
+            $games  = $params['games'];
+            $logger->info(json_encode($params));
+
+            // Get Doctrine Manager
+            $dbManager = $this->getDoctrine()->getManager();
+
+            // Get Sport
+            $sport = $this->getDoctrine()->getRepository('App:Sport')->find(1);
+
+            $gameCount = 0;
+            foreach($games as $game) {
+                $logger->info(json_encode($game));
+                $gameCount++;
+                $data = array(
+                    'title' => "Test ".$gameCount,
+                    'teams' => "[" . $game['teams'][0]['name'] . "," . $game['teams'][1]['name'] ."]",
+                    'eventID' => $game['event_id'],
+                    'gameData' => json_encode($game['line_periods'][1]['period_full_game'])
+                );
+
+
+                // Create Game
+                $game = new Game();
+                $game->setSport($sport);
+                $game->createNew($data);
+
+                $dbManager->persist($game);
+                $dbManager->flush();
+
+            }
+
+            $dbManager->clear();
+
+            return new JsonResponse(array(
+                'success' => true,
+                'games_updated' => $gameCount
+            ));
+        }
+    }
 
     public function getSportsListAction(Request $request) {
 
