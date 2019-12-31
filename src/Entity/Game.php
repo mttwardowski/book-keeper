@@ -29,7 +29,7 @@ class Game
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=2056)
      */
     private $teams;
 
@@ -71,9 +71,9 @@ class Game
 
     public function createNew($params = array()) {
         $this->title = isset($params['title']) ? $params['title'] : "No Title";
-        $this->teams = isset($params['teams']) ? $params['teams'] : "[]";
+        $this->teams = isset($params['teams']) ? json_encode($params['teams']) : "[]";
         $this->eventID  = isset($params['eventID']) ? $params['eventID'] : "0";
-        $this->gameData = isset($params['gameData']) ? $params['gameData'] : "[]";
+        $this->gameData = isset($params['gameData']) ? json_encode($params['gameData']) : "[]";
     }
 
     public function getId(): ?int

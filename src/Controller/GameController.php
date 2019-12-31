@@ -16,21 +16,27 @@ class GameController extends AbstractController
 
         $sports = $this->getDoctrine()->getRepository('App:Sport')->getAllActiveSports();
 
+        $sport = $this->getDoctrine()->getRepository('App:Sport')->find(1);
+        $games = $this->getDoctrine()->getRepository('App:Game')->getUpcomingGamesBySport($sport);
+
         return $this->render('pages/bet/find_games.html.twig', array(
             'sports'    => $sports,
+            'games'     => $games
         ));
     }
 
     public function gamePage(Request $request) {
 
         $gameID = $request->query->get('gameID');
+        $eventID = $request->query->get('eventID');
 
-        $game = $this->getDoctrine()->getRepository('App:Game')->find(1);
+        $game = $this->getDoctrine()->getRepository('App:Game')->findByEventID($eventID);
 
         $gameBets = $this->getDoctrine()->getRepository('App:GameBet')->getAllGameBets($game);
         $gameThreads = $this->getDoctrine()->getRepository('App:GameThread')->getThreadsByGame($game);
 
         return $this->render('pages/game_page.html.twig', array(
+            'game'      => $game,
             'bets'      => $gameBets,
             'threads'   => $gameThreads,
         ));

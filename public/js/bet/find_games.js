@@ -5,8 +5,8 @@ $(function() {
 
     init();
     // getSportsData();
-    // getGamesBySportID(1);
-    sendStaticGameData();
+    // getGamesBySportID(4);
+    // sendStaticGameData();
 
 
     function sendStaticGameData() {
@@ -8420,7 +8420,7 @@ $(function() {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://therundown-therundown-v1.p.rapidapi.com/sports/1/events?include=all_periods&include=scores&offset=0",
+            "url": "https://therundown-therundown-v1.p.rapidapi.com/sports/4/events?include=all_periods&include=scores&offset=0",
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "therundown-therundown-v1.p.rapidapi.com",
@@ -8430,6 +8430,44 @@ $(function() {
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+
+
+            let postData = [];
+            $.each(response.events, function( index, value ) {
+                console.log('INDEX', index);
+
+                let data = {
+                    title: value.teams[0].name + " vs. " + value.teams[1].name,
+                    eventID: value.event_id,
+                    sportID: value.sport_id,
+                    startDate: value.event_date,
+                    teams: value.teams_normalized,
+                    gameData: value.line_periods["1"].period_full_game,
+
+                };
+                console.log(data);
+                console.log(data.teams);
+                console.log(value.line_periods["1"].period_full_game);
+
+                postData.push(data);
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/data/games/update',
+                    data: data,
+                    error: function(e) {
+                        console.log(e);
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+
+
+            });
+            console.log(postData);
+
+
         });
     }
 
