@@ -54,7 +54,7 @@ class GameController extends AbstractController
             );
 
             //If Game Exists
-            if ($game = $this->getDoctrine()->getRepository('App:Game')->find(intval($params['gameID']))) {
+            if ($game = $this->getDoctrine()->getRepository('App:Game')->findByEventID(intval($params['gameID']))) {
 
                 // Create New Game Thread
                 $gameThread = new GameThread();

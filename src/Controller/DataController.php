@@ -25,29 +25,25 @@ class DataController extends AbstractController
             $user = $this->getUser();
             $params = $request->request->all();
             $gameParams  = $params;
-            $logger->info(json_encode($params));
 
             // Get Doctrine Manager
             $dbManager = $this->getDoctrine()->getManager();
 
-            // Get Sport
-            $sport = $this->getDoctrine()->getRepository('App:Sport')->find(2);
+            // If already exists, update.
+            if ($game = $this->getDoctrine()->getRepository('App:Game')->findByEventID(intval($gameParams['event_id']))) {
+                // Update Game Data
+//                $game->updateGameData($gameParams);
+            } else {
+                // Get Sport
+                $sport = $this->getDoctrine()->getRepository('App:Sport')->find(2);
 
+                // Create Game
+                $game = new Game();
+                $game->setSport($sport);
+                $game->createNew($gameParams);
+            }
 
-//            $data = array(
-////                'title' => "Test Game",
-////                'teams' => "[" . $game['teams'][0]['name'] . "," . $game['teams'][1]['name'] ."]",
-////                'eventID' => $game['eventID'],
-//                'gameData' => json_encode($game['teams']),
-//            );
-
-
-
-            // Create Game
-            $game = new Game();
-            $game->setSport($sport);
-            $game->createNew($gameParams);
-
+            // Persist
             $dbManager->persist($game);
             $dbManager->flush();
             $dbManager->clear();
@@ -57,22 +53,12 @@ class DataController extends AbstractController
 //            foreach($games as $game) {
 //                $logger->info(json_encode($game));
 //                $gameCount++;
-////                $data = array(
-////                    'title' => "Test ".$gameCount,
-////                    'teams' => "[" . $game['teams'][0]['name'] . "," . $game['teams'][1]['name'] ."]",
-////                    'eventID' => $game['event_id'],
-////                    'gameData' => json_encode($game['line_periods'][1]['period_full_game'])
-////                );
-//
-//
-//
-//
 //                // Create Game
-//                $game = new Game();
-//                $game->setSport($sport);
-//                $game->createNew($data);
+//                $newGame = new Game();
+//                $newGame->setSport($sport);
+//                $newGame->createNew($game);
 //
-//                $dbManager->persist($game);
+//                $dbManager->persist($newGame);
 //                $dbManager->flush();
 //
 //            }
