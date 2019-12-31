@@ -17,42 +17,42 @@
                                 </li>
                             {% endfor %}
 
-{#                            <li class="nav-item">#}
-{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nba"><span class="tab-label">NBA</span><span class="tab-value">0</span></a>#}
-{#                            </li>#}
-{#                            <li class="nav-item">#}
-{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_mlb"><span class="tab-label">MLB</span><span class="tab-value">0</span></a>#}
-{#                            </li>#}
-{#                            <li class="nav-item">#}
-{#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nhl"><span class="tab-label">NHL</span><span class="tab-value">0</span></a>#}
-{#                            </li>#}
+                            {#                            <li class="nav-item">#}
+                            {#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nba"><span class="tab-label">NBA</span><span class="tab-value">0</span></a>#}
+                            {#                            </li>#}
+                            {#                            <li class="nav-item">#}
+                            {#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_mlb"><span class="tab-label">MLB</span><span class="tab-value">0</span></a>#}
+                            {#                            </li>#}
+                            {#                            <li class="nav-item">#}
+                            {#                                <a aria-expanded="false" class="nav-link" data-toggle="tab" href="#tab_nhl"><span class="tab-label">NHL</span><span class="tab-value">0</span></a>#}
+                            {#                            </li>#}
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-{#        <div id="find_games_nfl" class="row">#}
+        {#        <div id="find_games_nfl" class="row">#}
 
-{#        </div>#}
+        {#        </div>#}
 
         <div class="row">
             {% for game in games %}
-            <div class="col-12 col-md-4 col-lg-3">
-                <a href="/game/?gameID=1&eventID={{ game.eventID }}">
-                    <div class="element-wrapper game-card">
-                        <div class="element-box">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a href="/game/?gameID=1&eventID={{ game.eventID }}">
+                        <div class="element-wrapper game-card">
+                            <div class="element-box">
                     <span class="badge badge-primary float-right">
                             <span>{{ game.sport.name }}</span>
                         </span>
-                            <div class="game-card-title">
-                                <h4>{{ game.title }}</h4>
-                                <p>EventID: {{ game.eventID }}</p>
+                                <div class="game-card-title">
+                                    <h4>{{ game.title }}</h4>
+                                    <p>{{ game.eventID }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             {% endfor %}
         </div>
 

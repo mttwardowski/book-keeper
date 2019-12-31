@@ -15,11 +15,15 @@ class DefaultController extends AbstractController
 
         $user = $this->getUser();
 
+        $sport = $this->getDoctrine()->getRepository('App:Sport')->find(4);
+        $games = $this->getDoctrine()->getRepository('App:Game')->getUpcomingGamesBySport($sport);
+
         $gameBets = $this->getDoctrine()->getRepository('App:GameBet')->getMyRecentGameBets($user);
 
 
         return $this->render('pages/index.html.twig', array(
-            'bets'  => $gameBets
+            'bets'  => $gameBets,
+            'games' => $games,
         ));
     }
 

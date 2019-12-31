@@ -36,6 +36,13 @@ class Sport
      */
     private $type;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=512)
+     */
+    private $defaultBGURL;
+
 
     public function __construct() {
         $this->dateCreated  = new \DateTime();
@@ -82,5 +89,21 @@ class Sport
         $this->type = $type;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDefaultBGURL(): string
+    {
+        return $this->defaultBGURL;
+    }
+
+    /**
+     * @param string $defaultBGURL
+     */
+    public function setDefaultBGURL(string $defaultBGURL): void
+    {
+        $this->defaultBGURL = $defaultBGURL;
     }
 }
