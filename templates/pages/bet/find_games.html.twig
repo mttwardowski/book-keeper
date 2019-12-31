@@ -13,7 +13,7 @@
                         <ul class="nav nav-tabs">
                             {% for sport in sports %}
                                 <li class="nav-item">
-                                    <a id="tab_sport_{{ sport.id }}" data-id="{{ sport.id }}" class="nav-link" data-toggle="tab" href="#tab_{{ sport.id }}"><span class="tab-label">{{ sport.name }}</span><span class="tab-value">{{ games | length }}</span></a>
+                                    <a id="tab_sport_{{ sport.id }}" data-id="{{ sport.id }}" class="nav-link find-games-sport-tab" data-toggle="tab" href="#tab_{{ sport.id }}"><span class="tab-label">{{ sport.name }}</span><span class="tab-value"></span></a>
                                 </li>
                             {% endfor %}
 
@@ -36,7 +36,7 @@
 
         {#        </div>#}
 
-        <div class="row">
+        <div id="game_cards_container" class="row">
             {% for game in games %}
                 <div class="col-12 col-md-4 col-lg-3">
                     <a href="/game/?gameID=1&eventID={{ game.eventID }}">

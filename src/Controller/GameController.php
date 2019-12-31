@@ -77,4 +77,24 @@ class GameController extends AbstractController
         }
     }
 
+    public function getGamesBySportsHTML(Request $request) {
+        if ($request->isXmlHttpRequest()) {
+
+            $user = $this->getUser();
+            $params = $request->request->all();
+
+            $sport = $this->getDoctrine()->getRepository('App:Sport')->find(intval($params['sportID']));
+            $games = $this->getDoctrine()->getRepository('App:Game')->getUpcomingGamesBySport($sport);
+
+            $html = $this->renderView('components/game_card.html.twig', array(
+                'games' => $games,
+            ));
+
+            return new JsonResponse(array(
+                'success'   => true,
+                'html'      => $html
+            ));
+        }
+    }
+
 }

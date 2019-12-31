@@ -31,7 +31,7 @@ class DataController extends AbstractController
             $dbManager = $this->getDoctrine()->getManager();
 
             // Get Sport
-            $sport = $this->getDoctrine()->getRepository('App:Sport')->find(4);
+            $sport = $this->getDoctrine()->getRepository('App:Sport')->find(2);
 
 
 //            $data = array(

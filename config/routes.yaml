@@ -37,6 +37,10 @@ api_update_games:
     path: /api/data/games/update
     controller: App\Controller\DataController::updateGames
 
+api_get_games_sport:
+    path: /api/games/get/html
+    controller: App\Controller\GameController::getGamesBySportsHTML
+
 # --- ADMIN USER ROUTES --- #
 admin_index:
     path: /admin/

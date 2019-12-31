@@ -1,0 +1,17 @@
+{% for game in games %}
+    <div class="col-12 col-md-4 col-lg-3">
+        <a href="/game/?eventID={{ game.eventID }}">
+            <div class="element-wrapper game-card">
+                <div class="element-box">
+                    <span class="badge badge-primary float-right">
+                            <span>{{ game.sport.name }}</span>
+                        </span>
+                    <div class="game-card-title">
+                        <h4>{{ game.title }}</h4>
+                        <p>{{ game.eventID }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endfor %}
